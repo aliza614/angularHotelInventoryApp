@@ -59,4 +59,8 @@ export class RoomsComponent implements OnInit {
 
   }
 
+  selectRoom(room: RoomList){
+    console.log(room);
+  }
+
 }
