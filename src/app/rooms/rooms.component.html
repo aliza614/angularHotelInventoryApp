@@ -1,0 +1,14 @@
+<h1>Welcome to {{hotelName}}</h1>
+
+<div [hidden]="hideRooms">
+Number of rooms:
+<div [ngStyle]="{'color' : rooms.availableRooms? 'steelBlue': 'red'}" [innerText]="numberOfRooms"></div>
+
+
+{{rooms?.availableRooms ?? 'No rooms'}}
+<div *ngIf= "rooms.availableRooms > 0">Rooms List</div>
+   <hinv-rooms-list [rooms]="roomList"></hinv-rooms-list>
+</div>
+<button (click)="toggle()">Toggle</button>
+
+<!-- document.getElementById('numberOfRooms').innerText=numberOfRooms; -->
