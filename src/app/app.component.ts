@@ -7,5 +7,5 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'hotelinventoryapp';
-  role='Admin';//='User';//'Admin';
+  role='Admin';//='User' or 'Admin';
 }
