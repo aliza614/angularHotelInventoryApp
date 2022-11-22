@@ -8,6 +8,9 @@ Number of rooms:
     {{selectedRoom|json}}
 </div>
 
+<div>
+    <button (click)="addRoom()">Add Room</button>
+</div>
 {{rooms?.availableRooms ?? 'No rooms'}}
 <div *ngIf= "rooms.availableRooms > 0">Rooms List</div>
    <hinv-rooms-list [rooms]="roomList"
