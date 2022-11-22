@@ -4,6 +4,9 @@
 Number of rooms:
 <div [ngStyle]="{'color' : rooms.availableRooms? 'steelBlue': 'red'}" [innerText]="numberOfRooms"></div>
 
+<div *ngIf="selectedRoom">
+    {{selectedRoom|json}}
+</div>
 
 {{rooms?.availableRooms ?? 'No rooms'}}
 <div *ngIf= "rooms.availableRooms > 0">Rooms List</div>
