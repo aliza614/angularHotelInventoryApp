@@ -76,7 +76,8 @@ export class RoomsComponent implements OnInit {
       checkoutTime: new Date('12-Nov-2021'),
       rating: 4.5,
     };
-    this.roomList.push(room);
+    //this.roomList.push(room);
+    this.roomList=[...this.roomList, room]
   }
 
 }
