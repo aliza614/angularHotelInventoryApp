@@ -6,7 +6,7 @@ import { RoomList, Rooms } from './rooms';
   templateUrl: './rooms.component.html',
   styleUrls: ['./rooms.component.scss']
 })
-export class RoomsComponent implements OnInit, DoCheck {
+export class RoomsComponent implements OnInit{ //, DoCheck {
 
   hotelName= 'Hilton Hotel';
   numberOfRooms=10;
