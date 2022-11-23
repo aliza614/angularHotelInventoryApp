@@ -1,4 +1,4 @@
-import { ChangeDetectionStrategy, Component, Input, OnInit, Output } from '@angular/core'
+import { ChangeDetectionStrategy, Component, Input, OnInit, Output, SimpleChanges } from '@angular/core'
 import { EventEmitter } from '@angular/core';
 import { RoomList } from '../rooms'
 
@@ -14,6 +14,10 @@ export class RoomsListComponent implements OnInit {
 
   @Output() selectedRoom =new EventEmitter<RoomList>();
   constructor() { }
+
+  ngOnChanges(changes: SimpleChanges):void{
+    console.log(changes);
+  }
 
   ngOnInit(): void {
   }
