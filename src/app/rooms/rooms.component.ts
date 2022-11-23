@@ -24,9 +24,9 @@ export class RoomsComponent implements OnInit, DoCheck {
    
    constructor() { }
 
-  ngDoCheck(): void {
-    console.log('on changes is called');
-  }
+  // ngDoCheck(): void {
+  //   console.log('on changes is called');
+  // }
 
   ngOnInit(): void {
     this.roomList =[
