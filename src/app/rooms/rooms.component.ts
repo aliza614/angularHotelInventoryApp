@@ -1,4 +1,4 @@
-import { createViewChild } from '@angular/compiler/src/core';
+//import { createViewChild } from '@angular/compiler/src/core';
 import { AfterViewChecked, AfterViewInit, Component, DoCheck, OnInit, ViewChild } from '@angular/core';
 import { HeaderComponent } from '../header/header.component'; 
 import { RoomList, Rooms } from './rooms';

@@ -1,5 +1,5 @@
-import { createViewChild } from '@angular/compiler/src/core';
-import { Component, ComponentFactoryResolver, OnInit, ViewChild, ViewContainerRef } from '@angular/core';
+
+import { AfterViewInit, Component, ComponentFactoryResolver, OnInit, ViewChild, ViewContainerRef } from '@angular/core';
 import { RoomsComponent } from './rooms/rooms.component';
 
 @Component({
@@ -7,18 +7,14 @@ import { RoomsComponent } from './rooms/rooms.component';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })
-export class AppComponent implements OnInit{
+export class AppComponent implements AfterViewInit{
   title = 'hotelinventoryapp';
   role='Admin';//='User' or 'Admin';
 
   @ViewChild('user',{read: ViewContainerRef}) vcr!: ViewContainerRef;
 
-  ngOnInit(){
-    // resolver: ComponentFactoryResolver=new ;
-    // const factory=this.resolver.resolveComponentFactory(RoomsComponent);
-
-
-    // const componentRef =this.vcr.createComponent<RoomsComponent>(factory);//=
-    const a=this.vcr.createComponent(RoomsComponent);
+  ngAfterViewInit(){
+    const componentRef=this.vcr.createComponent(RoomsComponent);
+    componentRef.instance.numberOfRooms =50;
   }
 }
